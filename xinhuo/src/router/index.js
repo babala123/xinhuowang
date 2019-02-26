@@ -6,7 +6,7 @@ import Inform from "@/components/inform/inform";
 import Sell from "../components/sell/sell.vue";
 import Biggun from "../components/biggun/biggun.vue";
 import My from "../components/my/my.vue";
-import Err from "../components/err/err.vue";
+import Error from "../components/err/err.vue";
 Vue.use(Router)
 
 export default new Router({
@@ -43,7 +43,7 @@ export default new Router({
 		},
 		{
       path:"**",//匹配所有
-      component:Err
+      component:Error
     }
 	]
 })
