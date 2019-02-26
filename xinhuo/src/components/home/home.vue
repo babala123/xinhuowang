@@ -5,7 +5,7 @@
 				<img src="item[index]">
 			</li>
 		</ul> -->
-		
+		<h2>lalallalala</h2>
 	</div>
 </template>
 
