@@ -7,6 +7,10 @@ import Sell from "../components/sell/sell.vue";
 import Biggun from "../components/biggun/biggun.vue";
 import My from "../components/my/my.vue";
 import Error from "../components/err/err.vue";
+import Hot from "../components/home/components/hot.vue";
+import TopGoods from "../components/home/components/topGoods";
+import NewGoods from "../components/home/components/newGoods.vue";
+import Secondhand from "../components/home/components/secondhand.vue";
 Vue.use(Router)
 
 export default new Router({
@@ -40,6 +44,26 @@ export default new Router({
 			path:"/my",
 			name:"my",
 			component:My
+		},
+		{
+			path:"/hot",
+			name:"hot",
+			component:Hot
+		},
+		{
+			path:"/topGoods",
+			name:"topGoods",
+			component:TopGoods
+		},
+		{
+			path:"/newGoods",
+			name:"newGoods",
+			component:NewGoods
+		},
+		{
+			path:"/secondhand",
+			name:"secondhand",
+			component:Secondhand
 		},
 		{
       path:"**",//匹配所有

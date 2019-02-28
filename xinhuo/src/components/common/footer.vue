@@ -47,7 +47,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.footer{
 		position:fixed;
 		left: 0;
@@ -55,6 +55,7 @@
 		width: 100%;
 		height: 1rem;
 		border-top: .02rem solid lightgrey;
+		background: #FFFFFF;
 		
 	}
 	.footer>ul{
