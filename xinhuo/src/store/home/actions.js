@@ -1,7 +1,14 @@
-import {HomeData} from "../../apis/home"
+import {informData,allData} from "../../apis/inform"
+
 export default {
-	async handleHomeData(){
-		let data = await HomeData();
+	async handleinformData({commit}){
+		let data = await informData();
+		commit("handleinformData",data);
 		console.log(data.data);
+	},
+	async handleallData({commit}){
+		let data = await allData();
+		commit("handleallData",data.data);
+		console.log(data);
 	}
 }

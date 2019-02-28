@@ -55,6 +55,7 @@
 		width: 100%;
 		height: 1rem;
 		border-top: .02rem solid lightgrey;
+		background: #f2f2f2;
 		
 	}
 	.footer>ul{
