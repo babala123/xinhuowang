@@ -1,5 +1,5 @@
 <template>
-	<div class="swiper-container banner" ref="bannerAuto" >
+	<div class="swiper-container banner" ref="bannerAuto">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide" v-for="(item,index) in banner">
 				<img :src="item.img">
@@ -8,23 +8,10 @@
 		<!-- 如果需要分页器 -->
 		<div class="swiper-pagination banner-pagination"></div>
 	</div>
-
 </template>
 
 <script>
-	
-// 	import Swiper from "swiper";
-// 	import "swiper/dist/css/swiper.min.css";
-// 	import Vuex from "vuex";
-// 	export default{
-// 		computed:{
-// 			...Vuex.mapState({
-// 				banner:store=>state.home.banner
-// 			})
-// 		}
-// 	}
-	
-		import Swiper from "swiper";
+	import Swiper from "swiper";
 	import "swiper/dist/css/swiper.min.css";
 	import Vuex from "vuex";
 	export default {
@@ -53,9 +40,9 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.banner {
-		margin-top: .88rem;
+		margin-top: 1.8rem;
 		width: 100%;
 		height: 3rem;
 		position: relative;
@@ -69,15 +56,4 @@
 		left: 0;
 		z-index: 5;
 	}
-	/* .swiper-container banner{
-		width: 100%;
-		height: .3rem;
-	} */
-/* 	.swiper-container{
-		width: 100%;
-		height: 3rem;
-		position: fixed;
-		top:0.9px
-		left:0;
-	} */
 </style>

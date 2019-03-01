@@ -1,19 +1,14 @@
 export default {
-<<<<<<< HEAD
-	handleinformData(state,data){
-		state.banner=data.data
+	getSellBannre(state,data){
+		state.banner = data.data
 	},
-	handleallData(state,data){
-		state.all=data.list
-=======
-	 handleHomeData(state,data){
-	    state.banners = data;
-		// console.log(state.banners)
-	   
+	getSellLaunchList(state,data){
+		state.onsell = data.list
 	},
-	handleGoodList(state,data){
-		state.goods = data;
-		 // console.log(state.goods)
->>>>>>> chenyu
+	getSellBrandList(state,data){
+		state.logo = data.data
+	},
+	getSellLaunchYearMonthList(state,data){
+		state.onsellgoods = data.data
 	}
 }

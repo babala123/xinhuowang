@@ -47,7 +47,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.footer{
 		position:fixed;
 		left: 0;
@@ -55,12 +55,7 @@
 		width: 100%;
 		height: 1rem;
 		border-top: .02rem solid lightgrey;
-<<<<<<< HEAD
-		background: #f2f2f2;
-=======
-		background: #FFFFFF;
->>>>>>> chenyu
-		
+		background: white;
 	}
 	.footer>ul{
 		width: 100%;

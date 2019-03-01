@@ -1,11 +1,6 @@
 export default {
-<<<<<<< HEAD
 	banner:[],
-	all:[]
-=======
-	banners:[],
-	goods:[],
-	types:[],
-	
->>>>>>> chenyu
+	logo:[],
+	onsell:[],
+	onsellgoods:[]
 }

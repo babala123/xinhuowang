@@ -6,16 +6,15 @@ import Inform from "@/components/inform/inform";
 import Sell from "../components/sell/sell.vue";
 import Biggun from "../components/biggun/biggun.vue";
 import My from "../components/my/my.vue";
-import Error from "../components/err/err.vue";
-import Hot from "../components/home/components/hot.vue";
-import TopGoods from "../components/home/components/topGoods";
-import NewGoods from "../components/home/components/newGoods.vue";
-import Secondhand from "../components/home/components/secondhand.vue";
+import Onepage from "../components/sell/components/onepage.vue";
+import Twopage from "../components/sell/components/twopage.vue";
+import Err from "../components/err/err.vue";
+
+
 Vue.use(Router)
 
 export default new Router({
-	routes: [
-		{
+	routes: [{
 			path: "/",
 			redirect: "/home"
 		},
@@ -26,48 +25,28 @@ export default new Router({
 			component: Home
 		},
 		{
-      path:"/inform",
+			path: "/inform",
 			name: "inform",
-      component:Inform
-    },
-		{
-      path:"/sell",
-			name:"sell",
-      component:Sell
-    },
-		{
-			path:"/biggun",
-			name:"biggun",
-			component:Biggun
+			component: Inform
 		},
 		{
-			path:"/my",
-			name:"my",
-			component:My
+			path: "/sell",
+			name: "sell",
+			component: Sell,
 		},
 		{
-			path:"/hot",
-			name:"hot",
-			component:Hot
+			path: "/biggun",
+			name: "biggun",
+			component: Biggun
 		},
 		{
-			path:"/topGoods",
-			name:"topGoods",
-			component:TopGoods
+			path: "/my",
+			name: "my",
+			component: My
 		},
 		{
-			path:"/newGoods",
-			name:"newGoods",
-			component:NewGoods
-		},
-		{
-			path:"/secondhand",
-			name:"secondhand",
-			component:Secondhand
-		},
-		{
-      path:"**",//匹配所有
-      component:Error
-    }
+			path: "**", //匹配所有
+			component: Err
+		}
 	]
 })
