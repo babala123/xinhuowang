@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
 
@@ -18,7 +18,7 @@ a { color:#666; text-decoration:none; }
 *{box-sizing:border-box}
 body,html{
     height: 100%;
-    /* overflow: hidden; */
+     overflow: hidden; 
 }
 
 
