@@ -2,11 +2,11 @@
 	<div class="home-banner">
 		<Top />
 		<div class="wrapper homeWrapper" ref="box" style="height:12rem">
-			<div class="content">
+			<div class="content"> 
 				<Nav @handleToggle="toggle" />
 				<component :is="com"></component>
-			</div>
 		</div>
+		</div> 
 	</div>
 </template>
 
@@ -18,12 +18,18 @@
 	import Clsiify from "./components/clssify"
 	import Shoes from "./components/shoes"
 	import Homepage from "./components/homepage"
-
-
-
-
-
+	// import Basketball from "./components/basketball"
 	export default {
+		computed: {
+			...Vuex.mapState({
+				state:state=>state.home,
+				page: state => state.home.page,
+				goods:state=>state.home.goods,
+				type:state=>state.home.type,
+				list:state=>state.home.list,
+				pages: state => state.home.pages,
+			})
+		},
 		components: {
 			"Top": Top,
 			"Nav": Nav,
@@ -32,6 +38,15 @@
 			"Homepage": Homepage,
 
 		},
+		watch: {
+			goods(newVal, oldVal) {
+				//重新计算content高度
+				this.scroll.refresh();
+
+				//数据加载完毕允许进行下次加载
+				this.scroll.finishPullUp();
+			}
+		},
 		data() {
 			return {
 				com: "Homepage",
@@ -39,10 +54,18 @@
 		},
 		created() {
 			this.handleHomeData();
+			this.handleGoodList(this.page);
+			this.handleGoodType();
+			this.handleCategoryList();
+			this.handleSearch();
 		},
 		methods: {
 			...Vuex.mapActions({
 				handleHomeData: "home/handleHomeData",
+				handleGoodList: "home/handleGoodList",
+				handleGoodType: "home/handleGoodType",
+				handleCategoryList:"home/handleCategoryList",
+				handleSearch:"home/handleSearch",
 			}),
 			toggle(params) {
 				switch (params) {
@@ -57,70 +80,25 @@
 						break;
 					default:
 						this.com = "Homepage";
-
-
-
 				}
 			}
-
 		},
-				mounted() {
-					let wrapper = document.querySelector(".wrapper");
-					let scroll = new BScroll(wrapper);
-					this.scroll = new BScroll(this.$refs.box, {
-						scrollY: true,
-						click: true
-					});
-					// console.log(this.scroll);
+		mounted() {
+			let wrapper = document.querySelector(".wrapper");
+			let scroll = new BScroll(wrapper);
+			this.scroll = new BScroll(this.$refs.box, {
+				scrollY: true,
+				click: true,
+				pullUpLoad: true,
+			});
+
+			this.scroll.on("pullingUp", () => {
+				if (this.page <= 13) {
+					this.handleGoodList(this.page);
 				}
-// 		mounted() {
-// 			this.scroll = new BScroll(this.$refs.box, {
-// 				// pullUpLoad: true,
-// 				click: true,
-// 				scrollY: true,
-// 			});
-// 
-// 		}
-	
-
-
-
-	// 		mounted(){
-	// 			//11张轮播图
-	// 			this.$axios.get("/api/index.php/Mobile/Index/getBanner",)
-	// 			.then((data)=>{
-	// 				//this.getBanner=data;
-	// 				//console.log(data.img)
-	// 				for(var i=0;i<=10;i++){
-	// 					getBanner.push(data[i].img);
-	// 				}
-	// 				// getBanner = this.getBanner
-	// 			});
-	// 			//新店到货、尖货推荐、热卖、二手鞋
-	// 			this.$axios.get("/api/index.php/Mobile/Index/getGoodsList",)
-	// 			.then((data)=>{
-	// 				this.goodslist = data;
-	// 				// console.log(this.goodslist)
-	// 			});
-	// 			//全部鞋履
-	// 			this.$axios.get("/api/index.php/Mobile/Index/getShoesList",)
-	// 			.then((data)=>{
-	// 				this.shoesList = data;
-	// 				// console.log(this.shoesList)
-	// 			});
-	// 			//分类
-	// 			this.$axios.get("/api/index.php/Mobile/Index/getCategoryList",)
-	// 			.then((data)=>{
-	// 				this.categoryList = data;
-	// 				// console.log(this.categoryList)
-	// 			});
-	// 			//鞋履
-	// 			this.$axios.get("/api/index.php/Mobile/Index/getGoodsType",)
-	// 			.then((data)=>{
-	// 				this.goodsType = data;
-	// 				// console.log(this.goodsType)
-	// 			});
-	// 		}
+			})
+			// console.log(this.scroll);
+		}
 	}
 </script>
 
