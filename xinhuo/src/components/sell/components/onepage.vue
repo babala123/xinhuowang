@@ -17,7 +17,7 @@
 	export default{
 		computed:{
 			...Vuex.mapState({
-				onsell:state=>state.home.onsell
+				onsell:state=>state.sell.onsell
 			})
 		}
 	}

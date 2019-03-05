@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import home from "./home";
+import home from "./sell";
 Vue.use(Vuex);
 
 let state = {};
@@ -14,7 +14,7 @@ const store = new Vuex.Store({
 	getters,
 	mutations,
 	modules:{
-		home
+		sell
 	}
 })
 

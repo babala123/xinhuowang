@@ -50,25 +50,25 @@
 
 			//轮播图
 			...Vuex.mapActions({
-				getSellBannre: "home/getSellBannre"
+				getSellBannre: "sell/getSellBannre"
 			}),
 			//品牌logo
 			...Vuex.mapActions({
-				getSellBrandList: "home/getSellBrandList"
+				getSellBrandList: "sell/getSellBrandList"
 			}),
 
 			//即将发售的日期
 			...Vuex.mapActions({
-				getSellLaunchYearMonthList: "home/getSellLaunchYearMonthList"
+				getSellLaunchYearMonthList: "sell/getSellLaunchYearMonthList"
 			}),
 			//已发售的商品
 			...Vuex.mapActions({
-				getSelledLaunchList: "home/getSelledLaunchList"
+				getSelledLaunchList: "sell/getSelledLaunchList"
 			})
 		},
 		computed: {
 			...Vuex.mapState({
-				state: state => state.home
+				state: state => state.sell
 			})
 		},
 	}
