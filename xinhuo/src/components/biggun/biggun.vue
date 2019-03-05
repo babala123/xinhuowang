@@ -25,7 +25,7 @@
 		},
 		computed: {
 			...Vuex.mapState({
-				state: state => state.home
+				state: state => state.sell
 			}),
 		},
 		watch: {
@@ -43,7 +43,7 @@
 		},
 		methods: {
 			...Vuex.mapActions({
-				getSellBiggun: "home/getSellBiggun"
+				getSellBiggun: "sell/getSellBiggun"
 			})
 		},
 	}

@@ -17,7 +17,7 @@
 	export default {
 		computed: {
 			...Vuex.mapState({
-				banner: state => state.home.sellbanner,
+				banner: state => state.sell.sellbanner,
 			})
 		},
 		updated() {

@@ -23,7 +23,7 @@
 		},
 		methods: {
 			...Vuex.mapActions({
-				getSellLaunchList: "home/getSellLaunchList"
+				getSellLaunchList: "sell/getSellLaunchList"
 			}),
 			switchBar(index) {
 				this.$emit("chang", index)

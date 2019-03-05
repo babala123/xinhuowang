@@ -33,7 +33,7 @@
 		},
 		computed: {
 			...Vuex.mapState({
-				username: state => state.home.username,
+				username: state => state.sell.username,
 			})
 		},
 	}
