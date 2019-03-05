@@ -6,11 +6,9 @@ import router from './router'
 import "./common/css/reset.css"
 import "./common/js/flexble"
 import store from "./store"
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+
 Vue.config.productionTip = true
 
-Vue.use(ElementUI);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

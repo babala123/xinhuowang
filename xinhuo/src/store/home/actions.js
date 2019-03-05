@@ -1,28 +1,34 @@
-import {HomeData} from "../../apis/home"
-import {SellBanner,SellLaunchList,SellBrandList,SellLaunchYearMonthList,} from "../../apis/sell"
+import {SellBanner,SellLaunchList,SellBrandList,SellLaunchYearMonthList,SelledLaunchList} from "../../apis/sell"
+import {SellBiggun} from "../../apis/biggun"
 export default {
-	async handleHomeData(){
-		let data = await HomeData();
-		//console.log(data.data);
-	},
 	async getSellBannre({commit}){
 		let data = await SellBanner();
 		commit("getSellBannre",data);
-		console.log(data);
+		//console.log(data);
 	},
 	async getSellLaunchList({commit}){
-		let data = await SellLaunchList();
+		let data = await SellLaunchList({type:0});
 		commit("getSellLaunchList",data.data);
-		console.log(data.data);
+		//console.log(data.data);
+	},
+	async getSelledLaunchList({commit}){
+		let data = await SelledLaunchList({type:1});
+		commit("getSelledLaunchList",data.data);
+		//console.log(data)
 	},
 	async getSellBrandList({commit}){
 		let data = await SellBrandList();
 		commit("getSellBrandList",data);
-		console.log(data)
+		//console.log(data)
 	},
 	async getSellLaunchYearMonthList({commit}){
 		let data = await SellLaunchYearMonthList();
 		commit("getSellLaunchYearMonthList",data.data);
-		console.log(data.data)
+		//console.log(data.data)
 	},
+	async getSellBiggun({commit}){
+		let data = await SellBiggun();
+		commit("getSellBiggun",data.data.list);
+		// console.log(data.data.list)
+	}
 }

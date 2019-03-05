@@ -8,6 +8,7 @@ import Biggun from "../components/biggun/biggun.vue";
 import My from "../components/my/my.vue";
 import Onepage from "../components/sell/components/onepage.vue";
 import Twopage from "../components/sell/components/twopage.vue";
+import Userlist from "../components/biggun/userlist.vue";
 import Err from "../components/err/err.vue";
 
 
@@ -22,27 +23,50 @@ export default new Router({
 
 			path: "/home",
 			name: "home",
-			component: Home
+			component: Home,
+			meta:{
+				flag:true
+			}
 		},
 		{
 			path: "/inform",
 			name: "inform",
-			component: Inform
+			component: Inform,
+			meta:{
+				flag:true
+			}
 		},
 		{
 			path: "/sell",
 			name: "sell",
 			component: Sell,
+			meta:{
+				flag:true
+			}
 		},
 		{
 			path: "/biggun",
 			name: "biggun",
-			component: Biggun
+			component: Biggun,
+			meta:{
+				flag:true
+			}
+		},
+		{
+			path: "/userlist",
+			name: "userlist",
+			component: Userlist,
+			meta:{
+				flag:false
+			}
 		},
 		{
 			path: "/my",
 			name: "my",
-			component: My
+			component: My,
+			meta:{
+				flag:true
+			}
 		},
 		{
 			path: "**", //匹配所有

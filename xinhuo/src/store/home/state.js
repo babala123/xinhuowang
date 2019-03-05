@@ -1,6 +1,8 @@
 export default {
-	banner:[],
+	sellbanner:[],
 	logo:[],
 	onsell:[],
-	onsellgoods:[]
+	twosell:[],
+	onsellgoods:[],
+	username:[]
 }

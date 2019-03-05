@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <router-view/>
-		<Footer-com></Footer-com>
+		<Footer-com v-show = "$route.meta.flag"></Footer-com>
   </div>
 </template>
 
 <script>
 import Footer from "./components/common/footer";
 export default {
+	
   components:{
 		"Footer-com":Footer
 	}

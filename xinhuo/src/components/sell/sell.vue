@@ -4,7 +4,7 @@
 		<List-com></List-com>
 		<Banner-com></Banner-com>
 		<Component :is="which"></Component>
-		
+
 	</div>
 
 </template>
@@ -31,7 +31,7 @@
 		},
 		created() {
 			this.getSellBannre();
-			this.getSellLaunchList();
+			this.getSelledLaunchList();
 			this.getSellBrandList();
 			this.getSellLaunchYearMonthList();
 			//this.getSellLateList()
@@ -48,25 +48,23 @@
 				}
 			},
 
-			// 			//轮播图
+			//轮播图
 			...Vuex.mapActions({
 				getSellBannre: "home/getSellBannre"
 			}),
-			// 			//品牌logo
-			...Vuex.mapActions({
-				getSellLaunchList: "home/getSellLaunchList"
-			}),
-			// 			//即将发售
+			//品牌logo
 			...Vuex.mapActions({
 				getSellBrandList: "home/getSellBrandList"
 			}),
-			// 			//即将发售的日期
+
+			//即将发售的日期
 			...Vuex.mapActions({
 				getSellLaunchYearMonthList: "home/getSellLaunchYearMonthList"
 			}),
-			// 			...Vuex.mapActions({
-			// 				getSellLateList:"home/getSellLateList"
-			// 			})
+			//已发售的商品
+			...Vuex.mapActions({
+				getSelledLaunchList: "home/getSelledLaunchList"
+			})
 		},
 		computed: {
 			...Vuex.mapState({

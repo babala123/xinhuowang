@@ -9,6 +9,7 @@
 </template>
 
 <script>
+	import Vuex from "vuex";
 	export default {
 
 		data() {
@@ -17,10 +18,23 @@
 
 			}
 		},
+		created(){
+			this.getSellLaunchList();
+		},
 		methods: {
+			...Vuex.mapActions({
+				getSellLaunchList: "home/getSellLaunchList"
+			}),
 			switchBar(index) {
 				this.$emit("chang", index)
-			}
+				this.getSellLaunchList({
+					type:index,
+					pages: 1,
+				})
+				
+			},
+
+
 		},
 	}
 </script>
@@ -47,6 +61,6 @@
 		line-height: 1rem;
 		font-size: .35rem;
 		color: black;
-		font-family:"微软雅黑"
+		font-family: "微软雅黑"
 	}
 </style>

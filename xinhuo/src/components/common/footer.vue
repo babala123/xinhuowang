@@ -19,27 +19,42 @@
 					{
 						icon:"&#xe63b;",
 						name:"商城",
-						path:"/home"
+						path:"/home",
+						meta:{
+							flag:true
+						}
 					},
 					{
 						icon:"&#xe512;",
 						name:"资讯",
-						path:"/inform"
+						path:"/inform",
+						meta:{
+							flag:true
+						}
 					},
 					{
 						icon:"&#xe611;",
 						name:"发售",
-						path:"/sell"
+						path:"/sell",
+						meta:{
+							flag:true
+						}
 					},
 					{
 						icon:"&#xe683;",
 						name:"达人",
-						path:"/biggun"
+						path:"/biggun",
+						meta:{
+							flag:true
+						}
 					},
 					{
 						icon:"&#xe505;",
 						name:"我的",
-						path:"/my"
+						path:"/my",
+						meta:{
+							flag:true
+						}
 					}
 				]
 			}
