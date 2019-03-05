@@ -1,12 +1,27 @@
 <template>
-	<div>new</div>
+	<div class="newGoods">
+		<Ngn-com />
+		<Search/>
+	</div>
 </template>
 
 <script>
-	export default{
-		
+	import Ngn from "./ngn"
+	import Search from "./search"
+
+	export default {
+		components: {
+			"Ngn-com": Ngn,
+			"Search": Search,
+
+
+		}
 	}
 </script>
 
-<style>
+<style scoped lang="scss">
+	.newGoods{
+		width: 100%;
+		height: 100%;
+	}
 </style>

@@ -18,6 +18,11 @@
 	
 	
 	export default {
+// 		computed:{
+// 			...Vuex.mapState({
+// 				page:state=>state.home.page
+// 			})
+// 		},
 		components: {
 			"Banner": Banner,
 			"Category": Category,
@@ -25,16 +30,16 @@
 			"HotShop": HotShop,
 			"AllShoes": AllShoes,
 		},
-		created() {
-			// this.handleHomeData();
-			this.handleGoodList();
-		},
-		methods: {
-			...Vuex.mapActions({
-				// handleHomeData: "home/handleHomeData",
-				handleGoodList: "home/handleGoodList"
-			}),
-		}
+// 		created() {
+// 			// this.handleHomeData();
+// 			this.handleGoodList(this.page);
+// 		},
+// 		methods: {
+// 			...Vuex.mapActions({
+// 				// handleHomeData: "home/handleHomeData",
+// 				handleGoodList: "home/handleGoodList",
+// 			}),
+// 		}
 	}
 </script>
 

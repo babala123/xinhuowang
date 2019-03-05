@@ -54,7 +54,7 @@
 </script>
 
 <style scoped lang="scss">
-	.good_box {
+.good_box {
 		width: 100%;
 
 		.title {
@@ -79,13 +79,14 @@
 				li {
 					width: 2rem;
 					height: 4rem;
+					padding: .2rem;
 
 					img {
 						width: 2rem;
 						height: 2rem;
 					}
 
-					p {
+					.text {
 						font-size: .24rem;
 						margin-bottom: .2rem;
 						text-overflow: hidden;
