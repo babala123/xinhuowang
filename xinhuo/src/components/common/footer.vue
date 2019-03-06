@@ -19,27 +19,42 @@
 					{
 						icon:"&#xe63b;",
 						name:"商城",
-						path:"/home"
+						path:"/home",
+						meta:{
+							flag:true
+						}
 					},
 					{
 						icon:"&#xe512;",
 						name:"资讯",
-						path:"/inform"
+						path:"/inform",
+						meta:{
+							flag:true
+						}
 					},
 					{
 						icon:"&#xe611;",
 						name:"发售",
-						path:"/sell"
+						path:"/sell",
+						meta:{
+							flag:true
+						}
 					},
 					{
 						icon:"&#xe683;",
 						name:"达人",
-						path:"/biggun"
+						path:"/biggun",
+						meta:{
+							flag:true
+						}
 					},
 					{
 						icon:"&#xe505;",
 						name:"我的",
-						path:"/my"
+						path:"/my",
+						meta:{
+							flag:true
+						}
 					}
 				]
 			}
@@ -47,7 +62,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.footer{
 		position:fixed;
 		left: 0;
@@ -55,12 +70,7 @@
 		width: 100%;
 		height: 1rem;
 		border-top: .02rem solid lightgrey;
-<<<<<<< HEAD
-		background: #f2f2f2;
-=======
-		background: #FFFFFF;
->>>>>>> chenyu
-		
+		background: white;
 	}
 	.footer>ul{
 		width: 100%;

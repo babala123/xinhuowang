@@ -32,4 +32,3 @@ export default(method,url,data=null)=>{
 		return;
 	}
 }
-

@@ -4,20 +4,18 @@ import Router from 'vue-router'
 import Home from '@/components/home/home'
 import Inform from "@/components/inform/inform";
 import Sell from "../components/sell/sell.vue";
-import Biggun from "../components/biggun/biggun.vue"
-import My from "../components/my/my.vue"
-import Error from "../components/err/err.vue"
-import Hot from "../components/home/components/hot.vue"
-import TopGoods from "../components/home/components/topGoods"
-import NewGoods from "../components/home/components/newGoods.vue"
-import Secondhand from "../components/home/components/secondhand.vue"
-import ShoppingCart from "../components/home/components/ shoppingCart"
-import Search from "../components/home/components/search"
+import Biggun from "../components/biggun/biggun.vue";
+import My from "../components/my/my.vue";
+import Onepage from "../components/sell/components/onepage.vue";
+import Twopage from "../components/sell/components/twopage.vue";
+import Userlist from "../components/biggun/userlist.vue";
+import Err from "../components/err/err.vue";
+
+
 Vue.use(Router)
 
 export default new Router({
-	routes: [
-		{
+	routes: [{
 			path: "/",
 			redirect: "/home"
 		},
@@ -25,63 +23,54 @@ export default new Router({
 
 			path: "/home",
 			name: "home",
-			component: Home
+			component: Home,
+			meta:{
+				flag:true
+			}
 		},
 		{
-      path:"/inform",
+			path: "/inform",
 			name: "inform",
-      component:Inform
-    },
-		{
-      path:"/sell",
-			name:"sell",
-      component:Sell
-    },
-		{
-			path:"/biggun",
-			name:"biggun",
-			component:Biggun
+			component: Inform,
+			meta:{
+				flag:true
+			}
 		},
 		{
-			path:"/my",
-			name:"my",
-			component:My
+			path: "/sell",
+			name: "sell",
+			component: Sell,
+			meta:{
+				flag:true
+			}
 		},
 		{
-			path:"/hot",
-			name:"hot",
-			component:Hot
+			path: "/biggun",
+			name: "biggun",
+			component: Biggun,
+			meta:{
+				flag:true
+			}
 		},
 		{
-			path:"/topGoods",
-			name:"topGoods",
-			component:TopGoods
+			path: "/userlist",
+			name: "userlist",
+			component: Userlist,
+			meta:{
+				flag:false
+			}
 		},
 		{
-			path:"/newGoods",
-			name:"newGoods",
-			component:NewGoods
+			path: "/my",
+			name: "my",
+			component: My,
+			meta:{
+				flag:true
+			}
 		},
 		{
-			path:"/secondhand",
-			name:"secondhand",
-			component:Secondhand
-		},
-		
-		{
-			path:"/shoppingCart",
-			name:"shoppingCart",
-			component:ShoppingCart
-		},
-		{
-			path:"/search",
-			name:"search",
-			component:Search
-		},
-		
-		{
-      path:"**",//匹配所有
-      component:Error
-    }
+			path: "**", //匹配所有
+			component: Err
+		}
 	]
 })

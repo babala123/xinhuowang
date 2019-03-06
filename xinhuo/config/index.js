@@ -14,7 +14,6 @@ module.exports = {
 		"/api":{
 			target:"https://m.xinhuo.com",
 			changeOrigin:true,
-			
 			pathRewrite:{
 				"^/api":""
 			}
