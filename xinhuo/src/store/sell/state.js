@@ -4,5 +4,6 @@ export default {
 	onsell:[],
 	twosell:[],
 	onsellgoods:[],
-	username:[]
+	username:[],
+	goodslick:[]
 }

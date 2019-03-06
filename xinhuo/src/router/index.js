@@ -9,6 +9,7 @@ import My from "../components/my/my.vue";
 import Onepage from "../components/sell/components/onepage.vue";
 import Twopage from "../components/sell/components/twopage.vue";
 import Userlist from "../components/biggun/userlist.vue";
+import Goods from "../components/sell/goods.vue";
 import Err from "../components/err/err.vue";
 
 
@@ -42,6 +43,14 @@ export default new Router({
 			component: Sell,
 			meta:{
 				flag:true
+			}
+		},
+		{
+			path: "/goods",
+			name: "goods",
+			component: Goods,
+			meta:{
+				flag:false
 			}
 		},
 		{

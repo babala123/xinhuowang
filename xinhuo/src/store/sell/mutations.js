@@ -17,6 +17,9 @@ export default {
 	},
 	getSellBiggun(state,data){
 		state.username = data
-		//console.log(state.username[0].list)
+	},
+	getSellgoodslike(state,data){
+		state.goodslick = data.data
+		console.log(data.data)
 	}
 }

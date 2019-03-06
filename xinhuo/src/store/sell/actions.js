@@ -1,4 +1,5 @@
-import {SellBanner,SellLaunchList,SellBrandList,SellLaunchYearMonthList,SelledLaunchList} from "../../apis/sell"
+import {SellBanner,SellLaunchList,SellBrandList,SellLaunchYearMonthList,SelledLaunchList,
+Sellgoods,Sellgoodslike} from "../../apis/sell"
 import {SellBiggun} from "../../apis/biggun"
 export default {
 	async getSellBannre({commit}){
@@ -30,5 +31,9 @@ export default {
 		let data = await SellBiggun();
 		commit("getSellBiggun",data.data.list);
 		// console.log(data.data.list)
+	},
+	async getSellgoodslike({commit}){
+		let data = await Sellgoodslike();
+		commit("getSellgoodslike",data)
 	}
 }

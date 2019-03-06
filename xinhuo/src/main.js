@@ -6,9 +6,13 @@ import router from './router'
 import "./common/css/reset.css"
 import "./common/js/flexble"
 import store from "./store"
-
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import { Button, Select } from 'element-ui';
 Vue.config.productionTip = true
-
+Vue.use(ElementUI);
+Vue.use(Button)
+Vue.use(Select)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

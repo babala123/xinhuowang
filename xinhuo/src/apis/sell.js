@@ -13,8 +13,8 @@ export const SellLaunchYearMonthList = (data)=>http("post","/api/index.php/Mobil
 //最近发售的商品
 //export const SellLateList = (data)=>http("post","/api/index.php/Mobile/Launch/getLaunchList/s?type=1",data)
 
-
-
+//详情页推荐
+export const Sellgoodslike = (data)=>http("post","/api/index.php/Mobile/Goods/getLikelyLikeGoods",data)
 
 
 
